@@ -1,13 +1,32 @@
-#container {
+#top {
+	height: 80px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.pad {
+.button {
 	display: inline-block;
-	width: 100px;
-	height: 100px;
-	background-color: yellow;
-	border: 1px solid black;
-	margin: -5px 0px -5px 0px;
+	width: 150px;
+	height: 50px;
+	border: 2px solid blue;
+	border-radius: 5px;
+	background-color: #F0F0F0;
+	line-height: 50px;
+	font-size: 30px;
+	font-family: arial;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+#container {
+	height: 800px;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	border:1px solid black;
+
 }
 
 .highlight {
