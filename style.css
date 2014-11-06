@@ -1,6 +1,10 @@
+body {
+	background-color: #F5F5F5;
+}
+
 #top {
 	height: 80px;
-	width: 400px;
+	width: 680px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -9,15 +13,24 @@
 	display: inline-block;
 	width: 150px;
 	height: 50px;
-	border: 2px solid blue;
+	margin: 0 6px 0 6px;
+	border: 2px solid;
 	border-radius: 5px;
-	background-color: #F0F0F0;
 	line-height: 50px;
 	font-size: 30px;
 	font-family: arial;
 	font-weight: bold;
+	color: white;
 	text-align: center;
 
+}
+
+#b1 {
+	background-color: #93B1C6;
+}
+
+#b2 {
+	background-color: #C7D0D5;
 }
 
 #container {
@@ -26,9 +39,6 @@
 	margin-left: auto;
 	margin-right: auto;
 	border:1px solid black;
+	background-color: white;
 
-}
-
-.highlight {
-	background-color: red;
 }

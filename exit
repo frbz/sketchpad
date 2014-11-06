@@ -1,0 +1,29 @@
+[33mcommit a77234ff2675d6b10a527ef536066aa186648cd8[m
+Author: Rik Godschalk <samuraipastacat@gmail.com>
+Date:   Thu Nov 6 00:38:19 2014 +0100
+
+    added clear and new grid buttons + refactored some code
+
+[33mcommit 93f21ac74067fce8243818f9751053edf0a44287[m
+Author: Rik Godschalk <samuraipastacat@gmail.com>
+Date:   Wed Nov 5 22:52:36 2014 +0100
+
+    added generated grid and hover over
+
+[33mcommit 73ecd117f0dbb2c326e6b23308af2a764370273d[m
+Author: Rik Godschalk <samuraipastacat@gmail.com>
+Date:   Wed Nov 5 20:12:06 2014 +0100
+
+    added necesarry files
+
+[33mcommit 075d84d44002ebc44382a66ff97f75cf4da621ca[m
+Author: Rik Godschalk <samuraipastacat@gmail.com>
+Date:   Wed Nov 5 19:58:32 2014 +0100
+
+    update README
+
+[33mcommit 27d49667c0ee0295d3d14c201f237d662c9830b9[m
+Author: frbz <frbz@users.noreply.github.com>
+Date:   Wed Nov 5 19:55:24 2014 +0100
+
+    Initial commit
