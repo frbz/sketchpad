@@ -1,50 +1,70 @@
 $(document).ready(function() {
-	generateGrid(10, 1);
+	generateGrid(40, 1);
 
 	$(".button:first").click(function() {
-		$("#container").empty();
-		var gridsize = +prompt("How many rows would you like to generate?");
-		generateGrid(gridsize, 1);
+		newGrid(1);
 	});
 
 	$(".button:nth-child(2)").click(function() {
-		$("#container").empty();
-		var gridsize = +prompt("How many rows would you like to generate?");
-		generateGrid(gridsize, 2);
+		newGrid(2);
 	});
 
 	$(".button:nth-child(3)").click(function() {
-		$("#container").empty();
-		var gridsize = +prompt("How many rows would you like to generate?");
-		generateGrid(gridsize, 3);
+		newGrid(3);
 	});
 
 	$(".button:nth-child(4)").click(function() {
-		$("#container > div > div").css("background-color", "white");
+		if ( background ) {
+			$("#container > div > div").css("opacity", "0");
+		}
+		else {
+			$("#container > div > div").css("background-color", "white");
+		}
 	});
 });
+var background = false;
 
-function generateGrid(size, color) {
+// Creates a numbers of new divs depending on the input
+// It fills up the 800px by 800px #container
+function generateGrid(size, mode) {
 	var grid = 800 / size;
 	for ( i = 0; i < size; i++) {
-		// need to set row class properties to prevent bugs with scaling
-		$("#container").append("<div></div>")
+		$("#container").append("<div></div>");
 	}
+	$("#container > div").css({"height": grid});
 	for ( j = 0; j < size; j++) {
-		$("#container > div").append("<div></div>")
+		$("#container > div").append("<div></div>");
 	}
-	$("#container > div > div").css({"height": grid, "width": grid, "display": "inline-block", 
-		"margin-bottom": "-5px"});
+	$("#container > div > div").css({"height": grid, "width": grid, "display": "inline-block",
+		"vertical-align": "top"});
+	colorMode(mode);
+}
+
+// Depending on the input changes the mouse over properties of the created divs
+function colorMode(mode) {
+	if ( mode === 3) {
+		$("#container > div > div").css({"background-color": "black", "opacity": "0"});
+	}
 	$("#container > div > div").mouseenter(function() {
-		if ( color === 1 ) {
-			$(this).css("background-color", "#EC583A");
-		}
-		else if ( color === 2) {
-  		var random = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-			$(this).css("background-color", random);
-		}
-		else if (color === 3) {
-			$(this).css("opacity", "+=0.1")
-		}
+	if ( mode === 1 ) {
+		background = false;
+		$(this).css("background-color", "#EC583A");
+	}
+	else if ( mode === 2) {
+		background = false;
+		var random = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+		$(this).css("background-color", random);
+	}
+	else if (mode === 3) {
+		background = true;
+		$(this).css("opacity", "+=0.1");
+	}
 	});
-};
+}
+
+// Creates a new grid with a prompt for grid size and colormode linked to buttons
+function newGrid(mode) {
+	$("#container").empty();
+		var gridsize = +prompt("How many rows would you like to generate?");
+		generateGrid(gridsize, mode);
+}
